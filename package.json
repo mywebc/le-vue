@@ -1,0 +1,17 @@
+{
+  "name": "le-vue-docs",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.0.0-beta.15",
+    "vue-router": "4.0.0-beta.2"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-beta.15",
+    "sass": "^1.26.10",
+    "vite": "^1.0.0-beta.3"
+  }
+}
