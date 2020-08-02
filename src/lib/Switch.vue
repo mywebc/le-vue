@@ -1,5 +1,5 @@
 <template>
-  <button @click="handleClick" :class="{checked:clickToggle}">
+  <button @click="handleClick" :class="{checked:value,disabled: disabled}">
     <span></span>
   </button>
 </template>
@@ -8,51 +8,67 @@
 import { ref } from "vue";
 
 export default {
-  setup(props) {
-    const clickToggle = ref(false);
-
+  props: {
+    value: Boolean,
+    disabled: Boolean,
+    trueColor: String,
+    falseColor: String
+  },
+  setup(props, context) {
     const handleClick = () => {
-      clickToggle.value = !clickToggle.value;
+      if (props.disabled) return;
+      context.emit("update:value", !props.value);
+      context.emit("onChange", !props.value);
     };
+    
+    props.trueColor && document.getElementsByTagName("body")[0].style.setProperty("--true_color", props.trueColor);
+    props.falseColor && document.getElementsByTagName("body")[0].style.setProperty("--false_color", props.falseColor);
+    
     return {
-      handleClick,
-      clickToggle
+      handleClick
     };
   }
 };
 </script>
 
 <style lang="scss" scoped>
-$h: 22px;
-$h2: $h - 4px;
+$height: 22px;
+$heightInner: $height - 4px;
+$true-color: var(--true_color, #1890ff);
+$false-color: var(--false_color, rgba(0, 0, 0, 0.4));
 
 button {
-  height: $h;
-  width: $h * 2;
+  height: $height;
+  width: $height * 2;
   border: none;
-  border-radius: $h/2;
+  border-radius: $height/2;
+  background: $false-color;
   position: relative;
+  > span {
+    position: absolute;
+    height: $heightInner;
+    width: $heightInner;
+    top: 2px;
+    left: 2px;
+    background: white;
+    border-radius: $heightInner/2;
+    transition: left 250ms;
+  }
 }
 
-span {
-  position: absolute;
-  height: $h2;
-  width: $h2;
-  top: 2px;
-  left: 2px;
-  background: white;
-  border-radius: $h/2;
-  transition: left 250ms;
-}
 button.checked {
-  background: blue;
+  background: $true-color;
+  > span {
+    left: calc(100% - #{$heightInner} - 2px);
+  }
 }
 
-button.checked > span {
-  left: calc(100% - #{$h2} - 2px);
+button.disabled {
+  cursor: no-drop;
+  opacity: 0.5;
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
 </style>

@@ -5,14 +5,10 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import  Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
-// import Switch from './components/Switch.vue'
+import Switch from './components/SwitchDemo.vue'
 import Form from './components/Form.vue'
 import Select from './components/Select.vue'
 import Input from './components/Input.vue' 
-
-import Switch from './lib/Switch.vue'
-
-
 
 const routerHistory = createWebHistory()
 const router = createRouter({
