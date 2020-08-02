@@ -10,6 +10,7 @@ import Form from './components/Form.vue'
 import Select from './components/Select.vue'
 import Input from './components/Input.vue' 
 
+
 const routerHistory = createWebHistory()
 const router = createRouter({
     history: routerHistory,

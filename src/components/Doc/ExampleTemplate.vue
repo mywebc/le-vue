@@ -9,7 +9,7 @@
         <div class="txt">{{codeDescription}}</div>
         <div class="icon" @click="codeToggleFun">开关</div>
       </div>
-      <div :class="codeToggle ? 'code-block' : 'code-none'">
+      <div :class="{'codeCommon':true , 'code-block' : codeToggle, 'code-none': !codeToggle}">
         <slot name="code"></slot>
       </div>
     </div>
@@ -80,11 +80,16 @@ export default {
         bottom: 2px;
       }
     }
+    .codeCommon {
+      transition: max-height 500ms;
+      margin-top: -8px;
+    }
     .code-block {
-      display: block;
+      max-height: 666px;
     }
     .code-none {
-      display: none;
+      max-height: 0;
+      overflow: hidden;
     }
   }
 }

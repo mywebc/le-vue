@@ -2,19 +2,15 @@
   <div class="switch_doc">
     <doc-title componentName="Switch 开关" componentTxt="开关选择器" componentDescription="需要在两种状态之间切换时。" />
 
-    <example-template codeTitle="基本用法" codeDescription="用法描述">
+    <example-template codeTitle="基本用法" codeDescription="最简单的用法">
       <template v-slot:components>
-        <Switch
-          v-model:value="switchVal"
-          :disabled="false"
-          @onChange="handleChange"
-          trueColor="green"
-        />
+        <Switch v-model:value="switchVal" />
       </template>
       <template v-slot:code>
-        <div>isShowCode</div>
+       <pre><code class="language-html">{{`<Switch v-model:value="switchVal" />`}}</code></pre>
       </template>
     </example-template>
+
   </div>
 </template>
 <script lang="ts">
