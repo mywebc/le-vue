@@ -8,7 +8,8 @@
 <style lang="scss" scoped>
 .main {
   width: 100%;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 </style>
 
