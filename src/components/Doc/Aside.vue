@@ -4,6 +4,9 @@
       <li>
         <router-link to="/doc/switch" active-class="activeCurrent">Switch组件</router-link>
       </li>
+       <li>
+        <router-link to="/doc/button" active-class="activeCurrent">Button组件</router-link>
+      </li>
       <li>
         <router-link to="/doc/input" active-class="activeCurrent">Input组件</router-link>
       </li>
