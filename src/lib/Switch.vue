@@ -1,5 +1,5 @@
 <template>
-  <button @click="handleClick" :class="{checked:value,disabled: disabled}">
+  <button class="le-switch" @click="handleClick" :class="{checked:value,disabled: disabled}">
     <span></span>
   </button>
 </template>
@@ -31,13 +31,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $height: 22px;
 $heightInner: $height - 4px;
 $true-color: var(--true_color, #1890ff);
 $false-color: var(--false_color, rgba(0, 0, 0, 0.4));
 
-button {
+.le-switch {
   height: $height;
   width: $height * 2;
   border: none;
@@ -56,19 +56,19 @@ button {
   }
 }
 
-button.checked {
+.le-switch.checked {
   background: $true-color;
   > span {
     left: calc(100% - #{$heightInner} - 2px);
   }
 }
 
-button.disabled {
+.le-switch.disabled {
   cursor: no-drop;
   opacity: 0.5;
 }
 
-button:focus {
+.le-switch:focus {
   outline: none;
 }
 </style>
