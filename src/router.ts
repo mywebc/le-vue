@@ -1,7 +1,4 @@
 // @ts-ignore
-import { createApp } from 'vue'
-import App from './App.vue'
-// @ts-ignore
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
@@ -13,7 +10,7 @@ import Button from "./components/ButtonDemo.vue"
 
 
 const routerHistory = createWebHistory()
-const router = createRouter({
+export const router = createRouter({
   history: routerHistory,
   linkActiveClass: 'active',
   routes: [{
@@ -47,8 +44,3 @@ const router = createRouter({
   }
   ]
 })
-
-const app = createApp(App);
-app.use(router);
-
-app.mount('#app')
