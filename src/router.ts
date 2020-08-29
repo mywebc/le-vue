@@ -7,7 +7,7 @@ import Form from './components/Form.vue'
 import Select from './components/Select.vue'
 import Input from './components/Input.vue'
 import Button from "./components/ButtonDemo.vue"
-
+import Dialog from "./components/DialogDemo.vue"
 
 const routerHistory = createWebHistory()
 export const router = createRouter({
@@ -39,6 +39,10 @@ export const router = createRouter({
     {
       path: "button",
       component: Button
+    },
+    {
+			path: "dialog",
+			component: Dialog
     }
     ]
   }

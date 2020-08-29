@@ -9,7 +9,7 @@
 .main {
   width: 100%;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
 }
 </style>
 

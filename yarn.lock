@@ -58,10 +58,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@rollup/plugin-commonjs@^13.0.0":
-  version "13.0.2"
-  resolved "https://registry.npm.taobao.org/@rollup/plugin-commonjs/download/@rollup/plugin-commonjs-13.0.2.tgz#b7783f0db049450c72d60bc06cf48d4951515e58"
-  integrity sha1-t3g/DbBJRQxy1gvAbPSNSVFRXlg=
+"@rollup/plugin-commonjs@^14.0.0":
+  version "14.0.0"
+  resolved "https://registry.npm.taobao.org/@rollup/plugin-commonjs/download/@rollup/plugin-commonjs-14.0.0.tgz#4285f9ec2db686a31129e5a2b415c94aa1f836f0"
+  integrity sha1-QoX57C22hqMRKeWitBXJSqH4NvA=
   dependencies:
     "@rollup/pluginutils" "^3.0.8"
     commondir "^1.0.1"
@@ -78,9 +78,9 @@
   dependencies:
     "@rollup/pluginutils" "^3.0.8"
 
-"@rollup/plugin-node-resolve@^8.0.0":
+"@rollup/plugin-node-resolve@^8.4.0":
   version "8.4.0"
-  resolved "https://registry.npm.taobao.org/@rollup/plugin-node-resolve/download/@rollup/plugin-node-resolve-8.4.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-node-resolve%2Fdownload%2F%40rollup%2Fplugin-node-resolve-8.4.0.tgz#261d79a680e9dc3d86761c14462f24126ba83575"
+  resolved "https://registry.npm.taobao.org/@rollup/plugin-node-resolve/download/@rollup/plugin-node-resolve-8.4.0.tgz?cache=0&sync_timestamp=1597330019345&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-node-resolve%2Fdownload%2F%40rollup%2Fplugin-node-resolve-8.4.0.tgz#261d79a680e9dc3d86761c14462f24126ba83575"
   integrity sha1-Jh15poDp3D2GdhwURi8kEmuoNXU=
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
@@ -241,36 +241,36 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
-"@vue/compiler-core@3.0.0-beta.24":
-  version "3.0.0-beta.24"
-  resolved "https://registry.npm.taobao.org/@vue/compiler-core/download/@vue/compiler-core-3.0.0-beta.24.tgz?cache=0&sync_timestamp=1594923131012&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcompiler-core%2Fdownload%2F%40vue%2Fcompiler-core-3.0.0-beta.24.tgz#7b62a24a9b6bb0d98c1e22149ba4cc67bd676d6a"
-  integrity sha1-e2KiSptrsNmMHiIUm6TMZ71nbWo=
+"@vue/compiler-core@3.0.0-rc.9":
+  version "3.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/@vue/compiler-core/download/@vue/compiler-core-3.0.0-rc.9.tgz#f2baef360dec3630a230a056dde1e76c9c7bb5f5"
+  integrity sha1-8rrvNg3sNjCiMKBW3eHnbJx7tfU=
   dependencies:
     "@babel/parser" "^7.10.4"
     "@babel/types" "^7.10.4"
-    "@vue/shared" "3.0.0-beta.24"
+    "@vue/shared" "3.0.0-rc.9"
     estree-walker "^2.0.1"
     source-map "^0.6.1"
 
-"@vue/compiler-dom@3.0.0-beta.24", "@vue/compiler-dom@^3.0.0-beta.24":
-  version "3.0.0-beta.24"
-  resolved "https://registry.npm.taobao.org/@vue/compiler-dom/download/@vue/compiler-dom-3.0.0-beta.24.tgz?cache=0&sync_timestamp=1594923130886&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcompiler-dom%2Fdownload%2F%40vue%2Fcompiler-dom-3.0.0-beta.24.tgz#287c1c80686824a56b6d8b246def9f7d86d534d3"
-  integrity sha1-KHwcgGhoJKVrbYskbe+ffYbVNNM=
+"@vue/compiler-dom@3.0.0-rc.9", "@vue/compiler-dom@^3.0.0-rc.5":
+  version "3.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/@vue/compiler-dom/download/@vue/compiler-dom-3.0.0-rc.9.tgz#2a122181db498c0605213fe541af24ecb03ef27e"
+  integrity sha1-KhIhgdtJjAYFIT/lQa8k7LA+8n4=
   dependencies:
-    "@vue/compiler-core" "3.0.0-beta.24"
-    "@vue/shared" "3.0.0-beta.24"
+    "@vue/compiler-core" "3.0.0-rc.9"
+    "@vue/shared" "3.0.0-rc.9"
 
-"@vue/compiler-sfc@^3.0.0-beta.15", "@vue/compiler-sfc@^3.0.0-beta.24":
-  version "3.0.0-beta.24"
-  resolved "https://registry.npm.taobao.org/@vue/compiler-sfc/download/@vue/compiler-sfc-3.0.0-beta.24.tgz#0ecc8b682a3688c41ada23a6db1ad4b4547aae25"
-  integrity sha1-DsyLaCo2iMQa2iOm2xrUtFR6riU=
+"@vue/compiler-sfc@^3.0.0-rc.1", "@vue/compiler-sfc@^3.0.0-rc.5":
+  version "3.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/@vue/compiler-sfc/download/@vue/compiler-sfc-3.0.0-rc.9.tgz?cache=0&sync_timestamp=1598481795932&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcompiler-sfc%2Fdownload%2F%40vue%2Fcompiler-sfc-3.0.0-rc.9.tgz#8b1af6bf1cb2561b5f92ce11053e5d21b558ca8b"
+  integrity sha1-ixr2vxyyVhtfks4RBT5dIbVYyos=
   dependencies:
     "@babel/parser" "^7.10.4"
     "@babel/types" "^7.10.4"
-    "@vue/compiler-core" "3.0.0-beta.24"
-    "@vue/compiler-dom" "3.0.0-beta.24"
-    "@vue/compiler-ssr" "3.0.0-beta.24"
-    "@vue/shared" "3.0.0-beta.24"
+    "@vue/compiler-core" "3.0.0-rc.9"
+    "@vue/compiler-dom" "3.0.0-rc.9"
+    "@vue/compiler-ssr" "3.0.0-rc.9"
+    "@vue/shared" "3.0.0-rc.9"
     consolidate "^0.15.1"
     estree-walker "^2.0.1"
     hash-sum "^2.0.0"
@@ -282,42 +282,42 @@
     postcss-selector-parser "^6.0.2"
     source-map "^0.6.1"
 
-"@vue/compiler-ssr@3.0.0-beta.24":
-  version "3.0.0-beta.24"
-  resolved "https://registry.npm.taobao.org/@vue/compiler-ssr/download/@vue/compiler-ssr-3.0.0-beta.24.tgz#3bdeaee92cb7b83515d270e0f52a3de623642638"
-  integrity sha1-O96u6Sy3uDUV0nDg9So95iNkJjg=
+"@vue/compiler-ssr@3.0.0-rc.9":
+  version "3.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/@vue/compiler-ssr/download/@vue/compiler-ssr-3.0.0-rc.9.tgz?cache=0&sync_timestamp=1598481796147&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcompiler-ssr%2Fdownload%2F%40vue%2Fcompiler-ssr-3.0.0-rc.9.tgz#52e4523b54d993ca0ad137813c5b1212988e62af"
+  integrity sha1-UuRSO1TZk8oK0TeBPFsSEpiOYq8=
   dependencies:
-    "@vue/compiler-dom" "3.0.0-beta.24"
-    "@vue/shared" "3.0.0-beta.24"
+    "@vue/compiler-dom" "3.0.0-rc.9"
+    "@vue/shared" "3.0.0-rc.9"
 
-"@vue/reactivity@3.0.0-beta.24":
-  version "3.0.0-beta.24"
-  resolved "https://registry.npm.taobao.org/@vue/reactivity/download/@vue/reactivity-3.0.0-beta.24.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Freactivity%2Fdownload%2F%40vue%2Freactivity-3.0.0-beta.24.tgz#99bd7684c3be4396c0a4c41bf33aae6baaed3ac7"
-  integrity sha1-mb12hMO+Q5bApMQb8zqua6rtOsc=
+"@vue/reactivity@3.0.0-rc.9":
+  version "3.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/@vue/reactivity/download/@vue/reactivity-3.0.0-rc.9.tgz?cache=0&sync_timestamp=1598481796370&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Freactivity%2Fdownload%2F%40vue%2Freactivity-3.0.0-rc.9.tgz#d6a3f40bb9c2e3b0f6f20b4693efc2f91d0c220b"
+  integrity sha1-1qP0C7nC47D28gtGk+/C+R0MIgs=
   dependencies:
-    "@vue/shared" "3.0.0-beta.24"
+    "@vue/shared" "3.0.0-rc.9"
 
-"@vue/runtime-core@3.0.0-beta.24":
-  version "3.0.0-beta.24"
-  resolved "https://registry.npm.taobao.org/@vue/runtime-core/download/@vue/runtime-core-3.0.0-beta.24.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fruntime-core%2Fdownload%2F%40vue%2Fruntime-core-3.0.0-beta.24.tgz#eafd0e68870d27d5dffbd4a1ea43201253321030"
-  integrity sha1-6v0OaIcNJ9Xf+9Sh6kMgElMyEDA=
+"@vue/runtime-core@3.0.0-rc.9":
+  version "3.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/@vue/runtime-core/download/@vue/runtime-core-3.0.0-rc.9.tgz?cache=0&sync_timestamp=1598481893917&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fruntime-core%2Fdownload%2F%40vue%2Fruntime-core-3.0.0-rc.9.tgz#5b4872363c69df6db4e937678ebdc68a141960bb"
+  integrity sha1-W0hyNjxp32206Tdnjr3GihQZYLs=
   dependencies:
-    "@vue/reactivity" "3.0.0-beta.24"
-    "@vue/shared" "3.0.0-beta.24"
+    "@vue/reactivity" "3.0.0-rc.9"
+    "@vue/shared" "3.0.0-rc.9"
 
-"@vue/runtime-dom@3.0.0-beta.24":
-  version "3.0.0-beta.24"
-  resolved "https://registry.npm.taobao.org/@vue/runtime-dom/download/@vue/runtime-dom-3.0.0-beta.24.tgz?cache=0&sync_timestamp=1594923085270&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fruntime-dom%2Fdownload%2F%40vue%2Fruntime-dom-3.0.0-beta.24.tgz#4c397712fd2a7f722728f90243e339ea1350c167"
-  integrity sha1-TDl3Ev0qf3InKPkCQ+M56hNQwWc=
+"@vue/runtime-dom@3.0.0-rc.9":
+  version "3.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/@vue/runtime-dom/download/@vue/runtime-dom-3.0.0-rc.9.tgz#6673901830c78cbe0b7c7c3f656db6ba49783dd1"
+  integrity sha1-ZnOQGDDHjL4LfHw/ZW22ukl4PdE=
   dependencies:
-    "@vue/runtime-core" "3.0.0-beta.24"
-    "@vue/shared" "3.0.0-beta.24"
+    "@vue/runtime-core" "3.0.0-rc.9"
+    "@vue/shared" "3.0.0-rc.9"
     csstype "^2.6.8"
 
-"@vue/shared@3.0.0-beta.24":
-  version "3.0.0-beta.24"
-  resolved "https://registry.npm.taobao.org/@vue/shared/download/@vue/shared-3.0.0-beta.24.tgz?cache=0&sync_timestamp=1594923085422&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fshared%2Fdownload%2F%40vue%2Fshared-3.0.0-beta.24.tgz#ca09ebd324ce30cc2ef8b729fe2cead5602f9c54"
-  integrity sha1-ygnr0yTOMMwu+Lcp/izq1WAvnFQ=
+"@vue/shared@3.0.0-rc.9":
+  version "3.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/@vue/shared/download/@vue/shared-3.0.0-rc.9.tgz#81e71c2c40dbbfc4f05b3b4a3f92cb2842864aa3"
+  integrity sha1-geccLEDbv8TwWztKP5LLKEKGSqM=
 
 accepts@^1.3.5:
   version "1.3.7"
@@ -744,10 +744,10 @@ es-module-lexer@^0.3.18:
   resolved "https://registry.npm.taobao.org/es-module-lexer/download/es-module-lexer-0.3.24.tgz#e6b2900758e9e210d23aec2092efc13ca235adea"
   integrity sha1-5rKQB1jp4hDSOuwgku/BPKI1reo=
 
-esbuild@^0.6.3:
-  version "0.6.3"
-  resolved "https://registry.npm.taobao.org/esbuild/download/esbuild-0.6.3.tgz#a957e22f2503c745793514388110f9b55b3a6f83"
-  integrity sha1-qVfiLyUDx0V5NRQ4gRD5tVs6b4M=
+esbuild@^0.6.10:
+  version "0.6.28"
+  resolved "https://registry.npm.taobao.org/esbuild/download/esbuild-0.6.28.tgz#b14fc7a2a04d13c416f75024ac5c449f4248edc4"
+  integrity sha1-sU/HoqBNE8QW91AkrFxEn0JI7cQ=
 
 escape-html@^1.0.3:
   version "1.0.3"
@@ -1718,10 +1718,10 @@ rollup-plugin-terser@^5.3.0:
     serialize-javascript "^2.1.2"
     terser "^4.6.2"
 
-rollup-plugin-vue@^6.0.0-beta.9:
-  version "6.0.0-beta.9"
-  resolved "https://registry.npm.taobao.org/rollup-plugin-vue/download/rollup-plugin-vue-6.0.0-beta.9.tgz#88d3381bb25c0d9bc534c50cc7eb4b0c3715862a"
-  integrity sha1-iNM4G7JcDZvFNMUMx+tLDDcVhio=
+rollup-plugin-vue@^6.0.0-beta.10:
+  version "6.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/rollup-plugin-vue/download/rollup-plugin-vue-6.0.0-beta.10.tgz?cache=0&sync_timestamp=1596128153837&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup-plugin-vue%2Fdownload%2Frollup-plugin-vue-6.0.0-beta.10.tgz#66d9b9a8dd2d085267d1cc398ea0113360879ac1"
+  integrity sha1-Ztm5qN0tCFJn0cw5jqARM2CHmsE=
   dependencies:
     debug "^4.1.1"
     hash-sum "^2.0.0"
@@ -1946,19 +1946,19 @@ vary@^1.1.2:
   resolved "https://registry.npm.taobao.org/vary/download/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vite@^1.0.0-beta.3:
-  version "1.0.0-beta.12"
-  resolved "https://registry.npm.taobao.org/vite/download/vite-1.0.0-beta.12.tgz#4a7a8325d1dab9c2c9a6d6fe110464182277a053"
-  integrity sha1-SnqDJdHaucLJptb+EQRkGCJ3oFM=
+vite@^1.0.0-rc.1:
+  version "1.0.0-rc.4"
+  resolved "https://registry.npm.taobao.org/vite/download/vite-1.0.0-rc.4.tgz#210106136861b231704e6381ac9eb1bcd655d4f0"
+  integrity sha1-IQEGE2hhsjFwTmOBrJ6xvNZV1PA=
   dependencies:
     "@babel/parser" "^7.9.4"
-    "@rollup/plugin-commonjs" "^13.0.0"
+    "@rollup/plugin-commonjs" "^14.0.0"
     "@rollup/plugin-json" "^4.0.3"
-    "@rollup/plugin-node-resolve" "^8.0.0"
+    "@rollup/plugin-node-resolve" "^8.4.0"
     "@types/koa" "^2.11.3"
     "@types/lru-cache" "^5.1.0"
-    "@vue/compiler-dom" "^3.0.0-beta.24"
-    "@vue/compiler-sfc" "^3.0.0-beta.24"
+    "@vue/compiler-dom" "^3.0.0-rc.5"
+    "@vue/compiler-sfc" "^3.0.0-rc.5"
     brotli-size "^4.0.0"
     chalk "^4.0.0"
     chokidar "^3.3.1"
@@ -1967,7 +1967,7 @@ vite@^1.0.0-beta.3:
     dotenv "^8.2.0"
     dotenv-expand "^5.1.0"
     es-module-lexer "^0.3.18"
-    esbuild "^0.6.3"
+    esbuild "^0.6.10"
     etag "^1.8.1"
     execa "^4.0.1"
     fs-extra "^9.0.0"
@@ -1994,11 +1994,12 @@ vite@^1.0.0-beta.3:
     rollup "^2.20.0"
     rollup-plugin-dynamic-import-variables "^1.0.1"
     rollup-plugin-terser "^5.3.0"
-    rollup-plugin-vue "^6.0.0-beta.9"
+    rollup-plugin-vue "^6.0.0-beta.10"
     rollup-plugin-web-worker-loader "^1.3.0"
+    rollup-pluginutils "^2.8.2"
     selfsigned "^1.10.7"
     slash "^3.0.0"
-    vue "^3.0.0-beta.24"
+    vue "^3.0.0-rc.5"
     ws "^7.2.3"
 
 vue-router@4.0.0-beta.2:
@@ -2006,14 +2007,14 @@ vue-router@4.0.0-beta.2:
   resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-4.0.0-beta.2.tgz?cache=0&sync_timestamp=1594111718735&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-4.0.0-beta.2.tgz#792dfafdb2b2eecfe84f53e2ce6855ccff079e92"
   integrity sha1-eS36/bKy7s/oT1PizmhVzP8HnpI=
 
-vue@^3.0.0-beta.15, vue@^3.0.0-beta.24:
-  version "3.0.0-beta.24"
-  resolved "https://registry.npm.taobao.org/vue/download/vue-3.0.0-beta.24.tgz?cache=0&sync_timestamp=1594922017841&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-3.0.0-beta.24.tgz#b52fdc61b5b2f27ccaa71765e133352e6b86252c"
-  integrity sha1-tS/cYbWy8nzKpxdl4TM1LmuGJSw=
+vue@^3.0.0-rc.1, vue@^3.0.0-rc.5:
+  version "3.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/vue/download/vue-3.0.0-rc.9.tgz?cache=0&sync_timestamp=1598480719140&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-3.0.0-rc.9.tgz#8c54e6168625e3533f1f764ad3fa89235b01afb3"
+  integrity sha1-jFTmFoYl41M/H3ZK0/qJI1sBr7M=
   dependencies:
-    "@vue/compiler-dom" "3.0.0-beta.24"
-    "@vue/runtime-dom" "3.0.0-beta.24"
-    "@vue/shared" "3.0.0-beta.24"
+    "@vue/compiler-dom" "3.0.0-rc.9"
+    "@vue/runtime-dom" "3.0.0-rc.9"
+    "@vue/shared" "3.0.0-rc.9"
 
 wcwidth@^1.0.1:
   version "1.0.1"
