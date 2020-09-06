@@ -2,6 +2,7 @@ import "./lib/le.scss";
 import "./index.scss";
 // @ts-ignore
 import { createApp } from "vue";
+// @ts-ignore
 import App from "./App.vue";
 // @ts-ignore
 import { router } from "./router";

@@ -1,13 +1,14 @@
 // @ts-ignore
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from './views/Home.vue'
-import Doc from './views/Doc.vue'
-import Switch from './components/SwitchDemo.vue'
-import Form from './components/Form.vue'
-import Select from './components/Select.vue'
-import Input from './components/Input.vue'
-import Button from "./components/ButtonDemo.vue"
-import Dialog from "./components/DialogDemo.vue"
+import Home from './views/Home.vue';
+import Doc from './views/Doc.vue';
+import Switch from './components/SwitchDemo.vue';
+import Form from './components/Form.vue';
+import Select from './components/Select.vue';
+import Input from './components/Input.vue';
+import Button from "./components/ButtonDemo.vue";
+import Dialog from "./components/DialogDemo.vue";
+import Tabs from "./components/TabsDemo.vue";
 
 const routerHistory = createWebHistory()
 export const router = createRouter({
@@ -43,6 +44,10 @@ export const router = createRouter({
     {
 			path: "dialog",
 			component: Dialog
+    },
+    {
+			path: "tabs",
+			component: Tabs
     }
     ]
   }
