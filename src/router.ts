@@ -42,12 +42,12 @@ export const router = createRouter({
       component: Button
     },
     {
-			path: "dialog",
-			component: Dialog
+      path: "dialog",
+      component: Dialog
     },
     {
-			path: "tabs",
-			component: Tabs
+      path: "tabs",
+      component: Tabs
     }
     ]
   }
