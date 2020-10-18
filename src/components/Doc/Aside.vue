@@ -4,13 +4,13 @@
       <li>
         <router-link to="/doc/switch" active-class="activeCurrent">Switch组件</router-link>
       </li>
-       <li>
+      <li>
         <router-link to="/doc/button" active-class="activeCurrent">Button组件</router-link>
       </li>
-       <li>
+      <li>
         <router-link to="/doc/dialog" active-class="activeCurrent">Dialog组件</router-link>
       </li>
-       <li>
+      <li>
         <router-link to="/doc/tabs" active-class="activeCurrent">Tabs组件</router-link>
       </li>
       <li>
@@ -25,6 +25,10 @@
     </ul>
   </div>
 </template>
+
+<script lang="ts">
+export default {};
+</script>
  
 <style lang="scss" scoped>
 .aside {
