@@ -9,11 +9,12 @@ import Input from './components/Input.vue';
 import Button from "./components/ButtonDemo.vue";
 import Dialog from "./components/DialogDemo.vue";
 import Tabs from "./components/TabsDemo.vue";
-import Intro from "./views/Intro.vue";
-import GetStarted from "./views/GetStarted.vue";
-import Install from "./views/Install.vue";
+
+import { h } from 'vue';
+import Markdown from './components/Markdown.vue';
 
 const routerHistory = createWebHistory()
+const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key: filename })
 export const router = createRouter({
   history: routerHistory,
   linkActiveClass: 'active',
@@ -27,15 +28,15 @@ export const router = createRouter({
     children: [
       {
         path: "intro",
-        component: Intro
+        component: md("intro")
       },
       {
         path: "get-started",
-        component: GetStarted
+        component: md('get-started')
       },
       {
         path: "install",
-        component: Install
+        component: md('install')
       },
       {
         path: "switch",
