@@ -9,3 +9,4 @@ git remote add gitee git@gitee.com:ChenXiaoLaNi/le-ui-docs.git
 git push -f -u origin master:docs
 git push -f -u gitee master
 cd -
+echo https://chenxiaolani.com/le-vue/index.html#/
