@@ -1,5 +1,5 @@
 // @ts-ignore
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
 import Switch from './components/SwitchDemo.vue';
@@ -16,7 +16,7 @@ import getStarted from "./markdown/get-started.md"
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue';
 
-const routerHistory = createWebHistory()
+const routerHistory = createWebHashHistory()
 const md = filename => h(Markdown, { content: filename, key: filename })
 export const router = createRouter({
   history: routerHistory,
