@@ -3,7 +3,7 @@
 
 然后在你的代码中写入下面的代码
 
-```
+```js
 import {Button, Tabs, Switch, Dialog} from "king-ui"
 ```
 
@@ -13,7 +13,7 @@ import {Button, Tabs, Switch, Dialog} from "king-ui"
 
 代码示例：
 
-```
+```html
 <template>
   <div>
     <Button>按钮</Button>
