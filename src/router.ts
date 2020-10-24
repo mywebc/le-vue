@@ -10,11 +10,14 @@ import Button from "./components/ButtonDemo.vue";
 import Dialog from "./components/DialogDemo.vue";
 import Tabs from "./components/TabsDemo.vue";
 
+import intro from "./markdown/intro.md";
+import getStarted from "./markdown/get-started.md"
+
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue';
 
 const routerHistory = createWebHistory()
-const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key: filename })
+const md = filename => h(Markdown, { content: filename, key: filename })
 export const router = createRouter({
   history: routerHistory,
   linkActiveClass: 'active',
@@ -26,13 +29,14 @@ export const router = createRouter({
     path: '/doc',
     component: Doc,
     children: [
+      { path: "", redirect: '/doc/intro' },
       {
         path: "intro",
-        component: md("intro")
+        component: md(intro)
       },
       {
         path: "get-started",
-        component: md('get-started')
+        component: md(getStarted)
       },
       {
         path: "switch",
