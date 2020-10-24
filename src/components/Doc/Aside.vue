@@ -4,11 +4,13 @@
       <li>
         <router-link to="/doc/intro" active-class="activeCurrent">介绍</router-link>
       </li>
+      <!--
        <li>
         <router-link to="/doc/install" active-class="activeCurrent">安装</router-link>
       </li>
+      -->
        <li>
-        <router-link to="/doc/get-started" active-class="activeCurrent">开始使用</router-link>
+        <router-link to="/doc/get-started" active-class="activeCurrent">快速上手</router-link>
       </li>
       <li>
         <router-link to="/doc/switch" active-class="activeCurrent">Switch组件</router-link>
@@ -48,6 +50,7 @@ export default {};
     li {
       height: 40px;
       cursor: pointer;
+      list-style: none;
       a {
         color: #000;
         display: inline-block;

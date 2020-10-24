@@ -5,17 +5,15 @@
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
 .main {
   width: 100%;
   display: flex;
-  // justify-content: center;
-  padding: 20px;
+  padding: 20px 40px;
+
 }
 </style>
 

@@ -22,3 +22,8 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+.markdown-body {
+  width: 100%;
+}
+</style>

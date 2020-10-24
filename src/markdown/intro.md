@@ -1,11 +1,27 @@
-# 介绍
+## Le-UI
 
-> King UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。
+> Le-UI是一款基于 Vue 3.0 和 TypeScript 编写的 UI 组件库。
 
+本组件库旨在学习Vue3新特性以及熟悉TypeScript语法，可以作为学习项目，因此不建议在生产环境中使用。
 
-* 这款组件库其实是我为了总结自己这几年的技术经验而写的，全程亲手编写，尽量不采用第三方库，包括你现在看到的这个官网也几乎都是我自己写的。
+## 特性
+* 基于最新的Vue3 Composition API 编写
+* ES2015+的支持以及严格的使用TypeScript编写
+* 采用Rollup配置打包
+* 友好的 API ，自由灵活地使用空间
+* 源码简单简洁，阅读无障碍
+* 细致、漂亮的 UI
 
-所以如果强烈不建议你将此 UI 库用于生产环境。但如果你是抱着看源代码的目的来的，那么这个库还是值得一看的。源代码放在了 github.com/frankfang/xxxxxxx，历史提交信息非常规范，你可以按提交的顺序逐个查看；你也可以直接查看每个组件的源代码和示例，运行方法见 README.md。
+## 版本
+* 0.1.1 beta
 
+## 兼容性
+* 基于Vue js3.0
+* 现代浏览器及IE10+
+* ES2015+
 
-下一节：[安装](#/doc/install)
+## 相关链接
+* [Vuejs官方](https://cn.vuejs.org/index.html)
+* [Vite官方](https://github.com/vitejs/vite)
+* [Rollup.js](https://www.rollupjs.com/)
+* [TypeScript](https://www.typescriptlang.org/)
