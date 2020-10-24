@@ -9,22 +9,23 @@
         <router-link to="/doc/install" active-class="activeCurrent">安装</router-link>
       </li>
       -->
-       <li>
+      <li>
         <router-link to="/doc/get-started" active-class="activeCurrent">快速上手</router-link>
       </li>
       <li>
-        <router-link to="/doc/switch" active-class="activeCurrent">Switch组件</router-link>
+        <router-link to="/doc/switch" active-class="activeCurrent">Switch 开关</router-link>
       </li>
       <li>
-        <router-link to="/doc/button" active-class="activeCurrent">Button组件</router-link>
+        <router-link to="/doc/button" active-class="activeCurrent">Button 按钮</router-link>
       </li>
       <li>
-        <router-link to="/doc/dialog" active-class="activeCurrent">Dialog组件</router-link>
+        <router-link to="/doc/dialog" active-class="activeCurrent">Dialog 对话框</router-link>
       </li>
       <li>
-        <router-link to="/doc/tabs" active-class="activeCurrent">Tabs组件</router-link>
+        <router-link to="/doc/tabs" active-class="activeCurrent">Tabs 标签页</router-link>
       </li>
-      <li>
+      <!--
+       <li>
         <router-link to="/doc/input" active-class="activeCurrent">Input组件</router-link>
       </li>
       <li>
@@ -33,6 +34,7 @@
       <li>
         <router-link to="/doc/select" active-class="activeCurrent">Select组件</router-link>
       </li>
+      -->
     </ul>
   </div>
 </template>
@@ -57,11 +59,9 @@ export default {};
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding-left: 50px;;
       }
       &:hover {
         a {

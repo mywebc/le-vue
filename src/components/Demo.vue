@@ -5,7 +5,8 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
-      <Button @click="toggleCode">查看代码</Button>
+      <span>{{describe}}</span>
+      <Button @click="toggleCode">Code</Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
@@ -16,7 +17,7 @@
 <script lang="ts">
 import Button from "../lib/Button.vue";
 import "prismjs";
-import "prismjs/themes/prism.css";
+import "prismjs/themes/prism-tomorrow.css";
 import { computed, ref } from "vue";
 const Prism = (window as any).Prism;
 export default {
@@ -24,7 +25,8 @@ export default {
     Button
   },
   props: {
-    component: Object
+    component: Object,
+    describe: String
   },
   setup(props) {
     const html = computed(() => {
@@ -48,6 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 $border-color: #d9d9d9;
+$fontSize-color: rgba(0, 0, 0, 0.65);
 .demo {
   border: 1px solid $border-color;
   margin: 16px 0 32px;
@@ -60,8 +63,13 @@ $border-color: #d9d9d9;
     padding: 16px;
   }
   &-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
+    font-size: 14px;
+    color: $fontSize-color;
   }
   &-code {
     padding: 8px 16px;
