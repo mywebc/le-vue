@@ -67,6 +67,7 @@ export default {
   flex-direction: column;
   flex: 1;
   position: relative;
+  overflow: hidden;
   .content {
     display: flex;
     padding-top: 10px;

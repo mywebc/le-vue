@@ -2,7 +2,7 @@
 
 打开终端运行下列命令：
 
-```javascript
+```js
 npm install king-ui
 // 或者
 yarn add king-ui

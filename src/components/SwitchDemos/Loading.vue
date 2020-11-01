@@ -1,10 +1,9 @@
 <demo>
-基础用法
+加载状态
 </demo>
 
 <template>
-  <Switch v-model:value="on" />&nbsp;
-  <Switch v-model:value="off" />
+  <Switch v-model:value="value" :loading="true"/>&nbsp;
 </template>
 
 <script lang="ts">
@@ -13,9 +12,10 @@ import { ref } from "vue";
 export default {
   components: { Switch },
   setup() {
-    const on = ref(true);
-    const off = ref(false);
-    return { on, off };
+    const value = ref(true);
+    return {
+      value
+    };
   }
 };
 </script>

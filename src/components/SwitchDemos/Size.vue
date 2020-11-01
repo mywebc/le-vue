@@ -1,9 +1,11 @@
 <demo>
-自定义开关颜色
+尺寸大小
 </demo>
 
 <template>
-  <Switch v-model:value="value" trueColor="green" falseColor="red"/>
+  <Switch v-model:value="value" />&nbsp;
+  <Switch v-model:value="value" size="small" />&nbsp;
+  <Switch v-model:value="value" size="large" />
 </template>
 
 <script lang="ts">
