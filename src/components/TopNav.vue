@@ -3,7 +3,7 @@
     <div class="asideIcon" @click="handleClickTopMenu" v-if="isShowAside" />
     <div class="left_logo">
       <router-link to="/">
-        <img src="../assets/logo.png" alt />
+        <img src="../assets/logo.svg" alt />
       </router-link>
       <span>Le-UI</span>
     </div>

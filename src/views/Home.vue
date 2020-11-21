@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="home_header">
-      <img src="../assets/logo.png" alt />
+      <img src="../assets/logo.svg" alt />
       <span>Le-UI</span>
     </div>
     <div class="home_main">
