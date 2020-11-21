@@ -10,9 +10,7 @@
       </thead>
       <tbody>
         <tr v-for="data,index in dataSource" :key="index">
-          <template v-for="column in columns">
-            <td :key="column.field">{{data[column.field]}}</td>
-          </template>
+          <td v-for="column in columns" :key="column.field">{{data[column.field]}}</td>
         </tr>
       </tbody>
     </table>
