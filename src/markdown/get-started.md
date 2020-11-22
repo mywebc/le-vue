@@ -3,15 +3,15 @@
 打开终端运行下列命令：
 
 ```js
-npm install king-ui
+npm install le-vue-ui
 // 或者
-yarn add king-ui
+yarn add le-vue-ui
 ```
 
 ## 引入组件
 
 ```js
-import {Button, Tabs, Switch, Dialog} from "le-ui"
+import { Button, Tabs, Switch, Dialog } from "le-ui"
 ```
 
 ## Vue 单文件组件
