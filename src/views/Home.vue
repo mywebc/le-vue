@@ -35,7 +35,7 @@ export default {
 .home {
   width: 100%;
   height: 100vh;
-  background: url("../assets/homeBack.png");
+  background: url('../homeBack.png') no-repeat;
   background-size: 100% 100%;
   .home_header {
     height: 64px;
