@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="home_right">
-        <Svg />
+        <img src="../assets/homeRight.svg" alt="">
       </div>
     </div>
   </div>
@@ -35,6 +35,8 @@ export default {
 .home {
   width: 100%;
   height: 100vh;
+  background: url("../assets/homeBack.png");
+  background-size: 100% 100%;
   .home_header {
     height: 64px;
     padding-left: 10%;
@@ -121,11 +123,18 @@ export default {
       width: 500px;
       height: 500px;
       flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 400px;
+        height: 400px;
+      }
     }
   }
   @media screen and (max-width: 800px) {
     .home_right {
-      display: none;
+      display: none !important;
     }
   }
   @media screen and (max-width: 480px) {
