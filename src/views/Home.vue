@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="home_right">
-        <img src="./homeRight.svg" alt="">
+        <img src="src/assets/homeRight.svg" alt="">
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@ export default {
 .home {
   width: 100%;
   height: 100vh;
-  background: url('./homeBack.png') no-repeat;
+  background: url('../assets/homeBack.png') no-repeat;
   background-size: 100% 100%;
   .home_header {
     height: 64px;
