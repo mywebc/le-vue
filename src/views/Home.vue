@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="home_right">
-        <img src="src/assets/homeRight.svg" alt="">
+        <img src="../assets/homeRight.svg" alt="">
       </div>
     </div>
   </div>
