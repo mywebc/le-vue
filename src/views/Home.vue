@@ -2,12 +2,12 @@
   <div class="home">
     <div class="home_header">
       <img src="../assets/logo.svg" alt />
-      <span>Le-UI</span>
+      <span>Le-Vue-UI</span>
     </div>
     <div class="home_main">
       <div class="home_left">
         <div class="intro">
-          <h1>Le-UI</h1>
+          <h1>Le-Vue-UI</h1>
           <h3>一套基于Vue3和TypeScript的UI框架</h3>
           <div class="links">
             <router-link to="/doc" class="start">查看文档</router-link>

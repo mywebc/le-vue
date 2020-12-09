@@ -5,7 +5,7 @@
       <router-link to="/">
         <img src="../assets/logo.svg" alt />
       </router-link>
-      <span>Le-UI</span>
+      <span>Le-Vue-UI</span>
     </div>
     <div class="right_guide">
       <div class="docs">

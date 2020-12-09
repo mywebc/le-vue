@@ -1,72 +1,94 @@
 
 <template>
   <div class="button_doc">
-    <div>Button 示例</div>
-    <h1>示例1</h1>
-    <div>
-      <Button @click="onClick">你好</Button>
-      <Button theme="button">你好</Button>
-      <Button theme="link">你好</Button>
-      <Button theme="text">你好</Button>
-    </div>
-    <h1>示例2</h1>
-    <div>
-      <div>
-        <Button size="big">大大大</Button>
-        <Button>普普通</Button>
-        <Button size="small">小小小</Button>
-      </div>
-      <div>
-        <Button theme="link" size="big">大大大</Button>
-        <Button theme="link">普普通</Button>
-        <Button size="small" theme="link">小小小</Button>
-      </div>
-      <div>
-        <Button size="big" theme="text">大大大</Button>
-        <Button theme="text">普普通</Button>
-        <Button size="small" theme="text">小小小</Button>
-      </div>
-    </div>
-    <h1>示例3</h1>
-    <div>
-      <dir>
-        <Button level="main">主要按钮</Button>
-        <Button>普通按钮</Button>
-        <Button level="danger">危险按钮</Button>
-      </dir>
-      <dir>
-        <Button theme="link" level="main">主要链接按钮</Button>
-        <Button theme="link">普通链接按钮</Button>
-        <Button theme="link" level="danger">危险链接按钮</Button>
-      </dir>
-      <dir>
-        <Button theme="text" level="main">主要文字按钮</Button>
-        <Button theme="text">普通文字按钮</Button>
-        <Button theme="text" level="danger">危险文字按钮</Button>
-      </dir>
-    </div>
-    <h1>示例4</h1>
-    <div>
-      <Button disabled>禁用按钮</Button>
-      <Button theme="link" disabled>禁用链接按钮</Button>
-      <Button theme="text" disabled>禁用按钮</Button>
-    </div>
-    <h1>示例5</h1>
-    <div>
-      <Button loading>加载中</Button>
-      <Button>加载完毕</Button>
-    </div>
+    <h2>Button 按钮</h2>
+     <Demo :component="BtnType" describe="设置theme有不同的显示" />
+     <Demo :component="BtnSize" describe="设置size有不同的大小尺寸" />
+     <Demo :component="BtnLevel" describe="设置level,以获得不同的等级" />
+     <Demo :component="BtnDisabled" describe="使用disabled设置禁止状态" />
+     <Demo :component="BtnLoading" describe="使用loading设置加载状态" />
+     <h2>API</h2>
+    <Table :columns="columns" :dataSource="dataSource" />
   </div>
 </template>
 <script lang="ts">
 import Button from "../lib/Button.vue";
+import BtnType from "./ButtonDemos/BtnType.vue";
+import BtnSize from "./ButtonDemos/BtnSize.vue";
+import BtnLevel from "./ButtonDemos/BtnLevel.vue";
+import BtnDisabled from "./ButtonDemos/BtnDisabled.vue";
+import BtnLoading from "./ButtonDemos/BtnLoading.vue";
+import Table from "../lib/Table.vue";
+import Demo from "./Demo.vue";
+import { reactive } from "vue"
+
 export default {
-  components: { Button },
+  components: { Button, Demo, Table },
   setup() {
     const onClick = () => {
       console.log("hi");
     };
-    return { onClick };
+    const columns = reactive([
+      {
+        text: "参数",
+        field: "params"
+      },
+      {
+        text: "说明",
+        field: "description"
+      },
+      {
+        text: "类型",
+        field: "type"
+      },
+      {
+        text: "默认值",
+        field: "default"
+      }
+    ]);
+
+    const dataSource = reactive([
+      {
+        params: "theme",
+        description: "按钮主题",
+        type: "link | text | button",
+        default: "button"
+      },
+      {
+        params: "size",
+        description: "尺寸大小",
+        type: "small | big | normal",
+        default: "normal"
+      },
+       {
+        params: "disabled",
+        description: "是否禁用",
+        type: "boolean",
+        default: "false"
+      },
+       {
+        params: "loading",
+        description: "是否显示加载",
+        type: "boolean",
+        default: "false"
+      },
+       {
+        params: "level",
+        description: "按钮等级",
+        type: "main | danger | normal",
+        default: "normal"
+      },
+    ]);
+    return { 
+        onClick,
+        BtnType,
+        BtnSize,
+        BtnLevel,
+        BtnDisabled,
+        BtnLoading,
+        dataSource,
+        columns
+      };
   }
 };
 </script>
