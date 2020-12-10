@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-    <Input placeholder="请输入内容" clearable/>
+    <Input placeholder="请输入内容" clearable />
 </template>
 
 <script lang="ts">

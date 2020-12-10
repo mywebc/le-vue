@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-    <Input placeholder="请输入内容"/>
+<Input placeholder="请输入内容" />
 </template>
 
 <script lang="ts">
@@ -14,4 +14,3 @@ export default {
     }
 }
 </script>
-

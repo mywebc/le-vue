@@ -14,11 +14,11 @@
     </div>
     <!-- input -->
     <template v-if="inputType !== 'textarea'">
-        <input :type="inputType" :placeholder="placeholder" ref="inputRef" :readonly="disabled">
+        <input :type="inputType" :placeholder="placeholder" ref="inputRef" :readonly="disabled" @blur="handleBlur" @focus="handleFocus" @change="handleChange" @input="handleInput">
     </template>
     <!-- textarea -->
     <template v-if="inputType === 'textarea'">
-        <textarea  :rows="row"></textarea>
+        <textarea :rows="row"></textarea>
     </template>
 
     <!-- 后缀 -->
@@ -74,16 +74,19 @@ export default {
             default: "text"
         },
         row: {
-            type: [String ,Number],
+            type: [String, Number],
             default: 2
         }
     },
-    setup(props, context) {
+    emits: ['input', 'change', 'focus', 'blur', 'clear'],
+
+    setup(props, ctx) {
         const inputRef = ref(null);
         const passwordVisible = ref(false);
 
         const clearInputVal = () => {
             inputRef.value.value = ""
+            ctx.emit("clear")
         }
 
         const togglePassword = () => {
@@ -94,12 +97,32 @@ export default {
             return passwordVisible.value ? 'password' : props.type
         })
 
+        const handleBlur = (event) => {
+            ctx.emit('blur', event)
+        }
+
+        const handleFocus = (event) => {
+            ctx.emit('focus', event)
+        }
+
+        const handleChange = (event) => {
+            ctx.emit('change', inputRef.value.value)
+        }
+
+        const handleInput = (event) => {
+            ctx.emit('input', inputRef.value.value)
+        }
+
         return {
             clearInputVal,
             inputRef,
             togglePassword,
             passwordVisible,
-            inputType
+            inputType,
+            handleBlur,
+            handleFocus,
+            handleChange,
+            handleInput
         }
     }
 }
