@@ -5,7 +5,7 @@ import Doc from './views/Doc.vue';
 import Switch from './components/SwitchDemo.vue';
 import Form from './components/Form.vue';
 import Select from './components/Select.vue';
-import Input from './components/Input.vue';
+import Input from './components/InputDemo.vue';
 import Button from "./components/ButtonDemo.vue";
 import Dialog from "./components/DialogDemo.vue";
 import Tabs from "./components/TabsDemo.vue";

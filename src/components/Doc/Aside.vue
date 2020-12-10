@@ -27,10 +27,11 @@
        <li>
         <router-link to="/doc/icon" active-class="activeCurrent">Icon</router-link>
       </li>
-      <!--
        <li>
         <router-link to="/doc/input" active-class="activeCurrent">Input组件</router-link>
       </li>
+      <!--
+      
       <li>
         <router-link to="/doc/form" active-class="activeCurrent">Form组件</router-link>
       </li>

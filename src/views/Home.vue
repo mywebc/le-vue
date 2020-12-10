@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import TopNav from "../components/TopNav.vue";
+import TopNav from "./TopNav.vue";
 import Svg from "./svg.vue";
 
 export default {
