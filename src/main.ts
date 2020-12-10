@@ -1,5 +1,5 @@
-import "./lib/le.scss";
-import "./index.scss";
+import "./styles/le.scss";
+import "./styles/index.scss";
 // @ts-ignore
 import { createApp } from "vue";
 // @ts-ignore

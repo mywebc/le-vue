@@ -24,6 +24,9 @@
       <li>
         <router-link to="/doc/tabs" active-class="activeCurrent">Tabs 标签页</router-link>
       </li>
+       <li>
+        <router-link to="/doc/icon" active-class="activeCurrent">Icon</router-link>
+      </li>
       <!--
        <li>
         <router-link to="/doc/input" active-class="activeCurrent">Input组件</router-link>
