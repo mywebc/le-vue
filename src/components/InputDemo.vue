@@ -50,7 +50,14 @@ export default {
             }
         ]);
 
-        const dataSource = reactive([{
+        const dataSource = reactive([
+             {
+                params: "v-model/value",
+                description: "默认的绑定值",
+                type: "string",
+                default: "-"
+            },
+            {
                 params: "clearable",
                 description: "是否可清空",
                 type: "boolean",

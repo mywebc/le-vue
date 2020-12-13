@@ -14,7 +14,7 @@
     </div>
     <!-- input -->
     <template v-if="inputType !== 'textarea'">
-        <input :type="inputType" :placeholder="placeholder" ref="inputRef" :readonly="disabled" @blur="handleBlur" @focus="handleFocus" @change="handleChange" @input="handleInput">
+        <input :value="value" :type="inputType" :placeholder="placeholder" ref="inputRef" :readonly="disabled" @blur="handleBlur" @focus="handleFocus" @change="handleChange" @input="handleInput">
     </template>
     <!-- textarea -->
     <template v-if="inputType === 'textarea'">
@@ -47,6 +47,10 @@ export default {
         Icon
     },
     props: {
+        value: {
+            type: String,
+            default: ""
+        },
         disabled: {
             type: Boolean,
             default: false,
@@ -78,7 +82,7 @@ export default {
             default: 2
         }
     },
-    emits: ['input', 'change', 'focus', 'blur', 'clear'],
+    emits: ['input', 'change', 'focus', 'blur', 'clear','update:value'],
 
     setup(props, ctx) {
         const inputRef = ref(null);
@@ -107,6 +111,7 @@ export default {
 
         const handleChange = (event) => {
             ctx.emit('change', inputRef.value.value)
+            ctx.emit("update:value", inputRef.value.value)
         }
 
         const handleInput = (event) => {
