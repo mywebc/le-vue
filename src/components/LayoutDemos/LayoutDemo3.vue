@@ -1,11 +1,14 @@
 <demo>
-布局一
+布局三
 </demo>
 
 <template>
 <Layout>
     <Header>Header</Header>
-    <Content>Content</Content>
+    <Layout>
+        <Content>Content</Content>
+        <Side>Side</Side>
+    </Layout>
     <Footer>Footer</Footer>
 </Layout>
 </template>
@@ -16,6 +19,7 @@ import {
     Layout,
     Footer,
     Header,
+    Side
 } from "../../lib/Layout"
 
 export default {
@@ -24,6 +28,7 @@ export default {
         Layout,
         Footer,
         Header,
+        Side
     }
 }
 </script>
@@ -38,9 +43,17 @@ export default {
         height: 80px;
     }
 
-    .le-layout-content {
-        background-color: rgba(16, 142, 233, 1);
-        height: 200px;
+    &>.le-layout {
+        .le-layout-content {
+            background-color: rgba(16, 142, 233, 1);
+            height: 200px;
+        }
+
+        .le-layout-side {
+            background-color: #3ba0e9;
+            height: 200px;
+            width: 100px;
+        }
     }
 
     .le-layout-footer {

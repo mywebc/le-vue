@@ -9,3 +9,9 @@ export default {
 
 }
 </script>
+
+<style lang="scss" scoped>
+.le-layout-content {
+    flex-grow: 1;
+}
+</style>
