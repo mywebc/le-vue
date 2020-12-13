@@ -3,13 +3,13 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
 import Switch from './components/SwitchDemo.vue';
-import Select from './components/Select.vue';
 import Input from './components/InputDemo.vue';
 import Button from "./components/ButtonDemo.vue";
 import Dialog from "./components/DialogDemo.vue";
 import Tabs from "./components/TabsDemo.vue";
 import Icon from "./components/IconDemo.vue";
 import Rate from "./components/RateDemo.vue";
+import Layout from "./components/LayoutDemo.vue";
 
 import intro from "./markdown/intro.md";
 import getStarted from "./markdown/get-started.md"
@@ -52,10 +52,6 @@ export const router = createRouter({
         component: Input
       },
       {
-        path: "select",
-        component: Select
-      },
-      {
         path: "button",
         component: Button
       },
@@ -74,6 +70,10 @@ export const router = createRouter({
       {
         path: "rate",
         component: Rate
+      },
+      {
+        path: "layout",
+        component: Layout
       }
     ]
   }
