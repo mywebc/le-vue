@@ -28,17 +28,11 @@
         <router-link to="/doc/icon" active-class="activeCurrent">Icon</router-link>
       </li>
        <li>
-        <router-link to="/doc/input" active-class="activeCurrent">Input组件</router-link>
+        <router-link to="/doc/input" active-class="activeCurrent">Input 输入框</router-link>
       </li>
-      <!--
-      
-      <li>
-        <router-link to="/doc/form" active-class="activeCurrent">Form组件</router-link>
+     <li>
+        <router-link to="/doc/rate" active-class="activeCurrent">Rate 评分</router-link>
       </li>
-      <li>
-        <router-link to="/doc/select" active-class="activeCurrent">Select组件</router-link>
-      </li>
-      -->
     </ul>
   </div>
 </template>

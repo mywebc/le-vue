@@ -10,6 +10,7 @@ import Button from "./components/ButtonDemo.vue";
 import Dialog from "./components/DialogDemo.vue";
 import Tabs from "./components/TabsDemo.vue";
 import Icon from "./components/IconDemo.vue";
+import Rate from "./components/RateDemo.vue";
 
 import intro from "./markdown/intro.md";
 import getStarted from "./markdown/get-started.md"
@@ -74,6 +75,10 @@ export const router = createRouter({
       {
         path: "icon",
         component: Icon
+      },
+      {
+        path: "rate",
+        component: Rate
       }
     ]
   }
