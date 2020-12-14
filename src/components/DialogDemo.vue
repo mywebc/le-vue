@@ -1,41 +1,35 @@
 <template>
-  <div>
-    dialog示例
-    <Button @click="toggleDialog">toggle</Button>
-    <Dialog v-model:visible="isShowDialog" :isCanClickOverlay="false" :mask="false">
-      <template v-slot:title>
-        <strong>提示</strong>
-      </template>
-      <template v-slot:content>
-        <strong>内容区域</strong>
-      </template>
-      <template v-slot:footer>
-          <Button @click="toggleDialog">确认</Button>
-          <Button @click="toggleDialog">取消</Button>
-      </template>
-    </Dialog>
-  </div>
+<div class="dialog-doc">
+    <h2>Dialog 对话框</h2>
+    <Demo :component="BasicDialog" describe="最基本的用法" />
+    <Demo :component="FooterDialog" describe="Footer插槽允许你自定义页脚，不传即为不显示页脚" />
+
+</div>
 </template>
 
 <script lang="ts">
-import { ref } from "vue";
-import Dialog from "../lib/Dialog.vue";
-import Button from "../lib/Button.vue";
+import {
+    ref
+} from "vue";
+import Demo from "./Demo.vue";
+import BasicDialog from "../components/DialogDemos/BasicDialog.vue";
+import FooterDialog from "../components/DialogDemos/FooterDialog.vue";
 
 export default {
-  components: {
-    Dialog,
-    Button
-  },
-  setup() {
-    const isShowDialog = ref(false);
-    const toggleDialog = () => {
-      isShowDialog.value = !isShowDialog.value;
-    };
-    return {
-      toggleDialog,
-      isShowDialog
-    };
-  }
+    components: {
+        Demo
+    },
+    setup() {
+        return {
+            BasicDialog,
+            FooterDialog
+        }
+    }
 };
 </script>
+
+<style lang="scss" scoped>
+.dialog-doc {
+    width: 100%;
+}
+</style>

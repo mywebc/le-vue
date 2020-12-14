@@ -6,20 +6,24 @@
 </template>
 
 <script lang="ts">
-import { computed } from "vue";
+import { computed, PropType } from "vue";
+
 export default {
   props: {
     theme: {
-      type: String,
-      default: "button"
+      type: String as PropType<'link' | 'text' | 'button'>,
+      default: "button",
+      validator: (val: string) => ['link', 'text', 'button'].includes(val),
     },
     size: {
-      type: String,
-      default: "normal"
+      type: String as PropType<'big' | 'small' | 'normal'>,
+      default: "normal",
+      validator: (val: string) => ['big', 'small', 'normal'].includes(val),
     },
     level: {
-      type: String,
-      default: "normal"
+      type: String as PropType<'main' | 'danger' | 'normal'>,
+      default: "normal",
+      validator: (val: string) => ['main', 'danger', 'normal'].includes(val),
     },
     disabled: {
       type: Boolean,

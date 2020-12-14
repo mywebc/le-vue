@@ -1,23 +1,23 @@
 <template>
-	<Teleport to="body">
-		<div v-if="visible">
-				<div class="le-dialog-overlay" @click="handleOverlay" v-if="isShowOverlay"></div>
-				<div class="le-dialog-wrapper">
-						<div class="le-dialog">
-								<header>
-										<slot name="title" />
-										<span @click="close" class="le-dialog-close"></span>
-								</header>
-								<main>
-										<slot name="content" />
-								</main>
-								<footer>
-										<slot name="footer"/>
-									</footer>
-						</div>
-				</div>
-		</div>
-	</Teleport>
+<Teleport to="body">
+    <div v-if="visible">
+        <div class="le-dialog-overlay" @click="handleOverlay" v-if="isShowOverlay"></div>
+        <div class="le-dialog-wrapper">
+            <div class="le-dialog">
+                <header>
+                    <slot name="title" />
+                    <span @click="close" class="le-dialog-close"></span>
+                </header>
+                <main>
+                    <slot name="content" />
+                </main>
+                <footer>
+                    <slot name="footer" />
+                </footer>
+            </div>
+        </div>
+    </div>
+</Teleport>
 </template>
 
 <script lang="ts">
@@ -35,10 +35,10 @@ export default {
             type: Boolean,
             default: true
         },
-				mask: {
+        isShowOverlay: {
             type: Boolean,
             default: true
-        },
+        }
     },
     setup(props, context) {
         const close = () => {
@@ -63,7 +63,7 @@ $border-color: #f0f0f0;
     background: white;
     border-radius: $radius;
     box-shadow: 0 0 3px fade_out(black, 0.8);
-    min-width: 20em;
+    min-width: 26em;
     max-width: 90%;
 
     &-overlay {
@@ -80,7 +80,7 @@ $border-color: #f0f0f0;
         position: fixed;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -100%);
         z-index: 11;
     }
 
