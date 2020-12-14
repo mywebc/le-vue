@@ -3,14 +3,14 @@
     <table>
       <thead>
         <tr>
-          <th v-for="column,index in columns" :key="index">
-            <div>{{column.text}}</div>
+          <th v-for="(column, index) in columns" :key="index">
+            <div>{{ column.text }}</div>
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="data,index in dataSource" :key="index">
-          <td v-for="column in columns" :key="column.field">{{data[column.field]}}</td>
+        <tr v-for="(data, index) in dataSource" :key="index">
+          <td v-for="column in columns" :key="column.field">{{ data[column.field] }}</td>
         </tr>
       </tbody>
     </table>
@@ -25,8 +25,6 @@ declare const props: {
   dataSource: any;
 };
 declare const context: SetupContext;
-
-console.log("12331", props);
 
 export default {};
 </script>
