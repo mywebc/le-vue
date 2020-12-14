@@ -10,12 +10,13 @@ import Tabs from "./components/TabsDemo.vue";
 import Icon from "./components/IconDemo.vue";
 import Rate from "./components/RateDemo.vue";
 import Layout from "./components/LayoutDemo.vue";
+import Spin from "./components/SpinDemo.vue";
 
 import intro from "./markdown/intro.md";
 import getStarted from "./markdown/get-started.md"
 
 import { h } from 'vue';
-import Markdown from './components/Markdown.vue';
+import Markdown from './components/Other/Markdown.vue';
 
 const routerHistory = createWebHashHistory()
 const md = filename => h(Markdown, { content: filename, key: filename })
@@ -74,6 +75,10 @@ export const router = createRouter({
       {
         path: "layout",
         component: Layout
+      },
+      {
+        path: "spin",
+        component: Spin
       }
     ]
   }

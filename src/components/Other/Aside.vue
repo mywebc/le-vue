@@ -24,17 +24,20 @@
       <li>
         <router-link to="/doc/tabs" active-class="activeCurrent">Tabs 标签页</router-link>
       </li>
-       <li>
+      <li>
         <router-link to="/doc/icon" active-class="activeCurrent">Icon</router-link>
       </li>
-       <li>
+      <li>
         <router-link to="/doc/input" active-class="activeCurrent">Input 输入框</router-link>
       </li>
-     <li>
+      <li>
         <router-link to="/doc/rate" active-class="activeCurrent">Rate 评分</router-link>
       </li>
       <li>
         <router-link to="/doc/layout" active-class="activeCurrent">Layout 布局</router-link>
+      </li>
+      <li>
+        <router-link to="/doc/spin" active-class="activeCurrent">Spin 加载中</router-link>
       </li>
     </ul>
   </div>
@@ -43,7 +46,7 @@
 <script lang="ts">
 export default {};
 </script>
- 
+
 <style lang="scss" scoped>
 .aside {
   width: 260px;
@@ -62,7 +65,7 @@ export default {};
         display: flex;
         justify-content: start;
         align-items: center;
-        padding-left: 50px;;
+        padding-left: 50px;
       }
       &:hover {
         a {
@@ -80,4 +83,3 @@ export default {};
   }
 }
 </style>
-

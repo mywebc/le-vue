@@ -10,8 +10,8 @@
 
 <script lang="ts">
 import TopNav from "./TopNav.vue";
-import Aside from "../components/Doc/Aside.vue";
-import Main from "../components/Doc/Main.vue";
+import Aside from "../components/Other/Aside.vue";
+import Main from "../components/Other/Main.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 import { router } from "../router";
 
