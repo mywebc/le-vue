@@ -11,6 +11,7 @@ import Icon from "./components/IconDemo.vue";
 import Rate from "./components/RateDemo.vue";
 import Layout from "./components/LayoutDemo.vue";
 import Spin from "./components/SpinDemo.vue";
+import Radio from "./components/RadioDemo.vue";
 
 import intro from "./markdown/intro.md";
 import getStarted from "./markdown/get-started.md"
@@ -79,6 +80,10 @@ export const router = createRouter({
       {
         path: "spin",
         component: Spin
+      },
+      {
+        path: "radio",
+        component: Radio
       }
     ]
   }

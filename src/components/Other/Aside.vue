@@ -39,6 +39,9 @@
       <li>
         <router-link to="/doc/spin" active-class="activeCurrent">Spin 加载中</router-link>
       </li>
+      <li>
+        <router-link to="/doc/radio" active-class="activeCurrent">Radio 单选框</router-link>
+      </li>
     </ul>
   </div>
 </template>

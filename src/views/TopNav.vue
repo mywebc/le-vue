@@ -29,7 +29,6 @@ export default {
   setup(props) {
     const { toggleAisde } = props;
     const handleClickTopMenu = () => {
-      console.log("toggleAisde", toggleAisde);
       toggleAisde && toggleAisde();
     };
     return { handleClickTopMenu };
