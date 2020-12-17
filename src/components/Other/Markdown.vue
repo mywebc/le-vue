@@ -4,17 +4,16 @@
 
 <script lang="ts">
 import { ref } from "vue";
+import "github-markdown-css/github-markdown.css";
+
 export default {
   props: {
     content: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
+  setup() {},
 };
 </script>
-<style lang="scss">
-.markdown-body {
-  width: 100%;
-}
-</style>
+

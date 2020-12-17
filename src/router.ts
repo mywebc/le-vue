@@ -89,3 +89,12 @@ export const router = createRouter({
   }
   ]
 })
+
+router.afterEach((to, from) => {
+  if(to.fullPath === '/doc/get-started') {
+  //   if(location.href.indexOf("#reloaded")==-1){
+  //     location.href=location.href+"#reloaded";
+  //     location.reload();
+  // }
+  }
+})

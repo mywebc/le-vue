@@ -34,7 +34,7 @@ export const classes = computed(() => ({
 }));
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $height: 22px;
 $heightInner: $height - 4px;
 

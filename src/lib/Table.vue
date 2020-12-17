@@ -29,7 +29,7 @@ declare const context: SetupContext;
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .le-table {
   table {
     border-collapse: collapse;
