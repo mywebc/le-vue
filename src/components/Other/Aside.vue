@@ -42,6 +42,9 @@
       <li>
         <router-link to="/doc/radio" active-class="activeCurrent">Radio 单选框</router-link>
       </li>
+      <li>
+        <router-link to="/doc/checkBox" active-class="activeCurrent">CheckBox 复选框</router-link>
+      </li>
     </ul>
   </div>
 </template>
