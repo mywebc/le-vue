@@ -5,7 +5,7 @@
       'le-checkBox-disabled': disabled,
     }"
   >
-    <input type="checkBox" :id="label" />
+    <input type="checkBox" :id="label" :checked="value" @change="handleChange" ref="inputRef" :indeterminate="indeterminate"/>
     <label :for="label">
       <slot></slot>
       <template v-if="!$slots.default">{{ label }}</template>
@@ -14,6 +14,7 @@
 </template>
 
 <script lang="ts">
+import { ref } from "vue";
 export default {
   props: {
     disabled: {
@@ -21,20 +22,53 @@ export default {
       default: false,
     },
     value: {
-      type: String,
+      type: Boolean,
       required: true,
     },
     label: {
       type: String,
       required: true,
     },
+    indeterminate: {
+      type: Boolean,
+      default: false,
+    },
   },
   emits: ["update:value", "change"],
+  setup(props, ctx) {
+    const inputRef = ref<HTMLInputElement>(null);
 
+    const handleChange = () => {
+      ctx.emit("change", inputRef.value.checked);
+    };
+    return { handleChange, inputRef };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.le-check-box {
+.le-checkBox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+  label {
+    display: inline-flex;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  &.le-checkBox-disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    input {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    label {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
 }
 </style>
