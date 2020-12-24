@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-  <CheckBox v-model:value="checkAll" label="全选" :indeterminate="indeterminate" />
+  <CheckBox v-model:value="checkAll" label="全选" :indeterminate="indeterminate" @change="handleCheckAll" />
   <check-box-group v-model:value="options">
     <CheckBox label="上海" />
     <CheckBox label="北京" />
@@ -14,19 +14,52 @@
 <script lang="ts">
 import CheckBox from "../../lib/CheckBox/CheckBox.vue";
 import CheckBoxGroup from "../../lib/CheckBox/CheckBoxGroup.vue";
+import { isSameStringArr } from "../../../utils";
 
-import { ref, reactive } from "vue";
+import { reactive, toRefs, watchEffect, onMounted } from "vue";
+
+const cityOptions = ["上海", "北京", "广州", "深圳"];
 
 export default {
   components: { CheckBox, CheckBoxGroup },
   setup() {
-    const checkAll = ref(false);
-    const indeterminate = ref(true);
-    const options = reactive([]);
+    const state = reactive({
+      options: ["上海"],
+      checkAll: false,
+      indeterminate: true,
+    });
+    const handleCheckAll = (check) => {
+      if (check.checked) {
+        state.indeterminate = false;
+        state.checkAll = true;
+        state.options = [...cityOptions];
+      } else {
+        state.checkAll = false;
+        state.indeterminate = false;
+        state.options = [];
+      }
+    };
+
+    onMounted(() => {
+      watchEffect(() => {
+        const isSameArr = isSameStringArr(cityOptions, state.options);
+        console.log("asdada", isSameArr);
+        if (isSameArr) {
+          state.checkAll = true;
+          state.indeterminate = false;
+        } else if (state.options.length === 0) {
+          state.indeterminate = false;
+          state.checkAll = false;
+        } else {
+          state.checkAll = false;
+          state.indeterminate = true;
+        }
+      });
+    });
+
     return {
-      indeterminate,
-      checkAll,
-      options,
+      ...toRefs(state),
+      handleCheckAll,
     };
   },
 };

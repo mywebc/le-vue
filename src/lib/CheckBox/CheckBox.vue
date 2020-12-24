@@ -5,7 +5,7 @@
       'le-checkBox-disabled': disabled,
     }"
   >
-    <input type="checkBox" :id="label" :checked="value" @change="handleChange" ref="inputRef" :indeterminate="indeterminate"/>
+    <input type="checkBox" :id="label" :checked="value" @change="handleChange" ref="inputRef" :indeterminate="indeterminate" />
     <label :for="label">
       <slot></slot>
       <template v-if="!$slots.default">{{ label }}</template>
@@ -39,7 +39,7 @@ export default {
     const inputRef = ref<HTMLInputElement>(null);
 
     const handleChange = () => {
-      ctx.emit("change", inputRef.value.checked);
+      ctx.emit("change", { value: props.label, checked: inputRef.value.checked });
     };
     return { handleChange, inputRef };
   },
