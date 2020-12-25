@@ -43,7 +43,6 @@ export default {
     onMounted(() => {
       watchEffect(() => {
         const isSameArr = isSameStringArr(cityOptions, state.options);
-        console.log("asdada", isSameArr);
         if (isSameArr) {
           state.checkAll = true;
           state.indeterminate = false;

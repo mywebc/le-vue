@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import CheckBox from "./CheckBox.vue";
-import { PropType, computed, watch, watchEffect } from "vue";
+import { PropType, computed, watch, watchEffect, reactive } from "vue";
 export default {
   props: {
     value: {
@@ -19,6 +19,7 @@ export default {
   emits: ["update:value", "change"],
   setup(props, ctx) {
     const defaults = ctx.slots.default();
+    const checkedValue = reactive(props.value);
 
     watchEffect(() => {
       defaults.forEach((_) => {
@@ -32,21 +33,20 @@ export default {
     });
 
     const handleGroupCheckBox = (x: { value: string; checked: boolean }) => {
-      const newValue = JSON.parse(JSON.stringify(props.value));
       if (x.checked) {
-        if (newValue.indexOf(x.value) === -1) {
-          newValue.push(x.value);
+        if (checkedValue.indexOf(x.value) === -1) {
+          checkedValue.push(x.value);
         }
       } else {
-        if (newValue.indexOf(x.value) !== -1) {
-          newValue.splice(
-            newValue.findIndex((_) => _ === x.value),
+        if (checkedValue.indexOf(x.value) !== -1) {
+          checkedValue.splice(
+            checkedValue.findIndex((_) => _ === x.value),
             1
           );
         }
       }
-      ctx.emit("update:value", newValue);
-      ctx.emit("change", newValue);
+      ctx.emit("update:value", checkedValue);
+      ctx.emit("change", checkedValue);
     };
 
     return {

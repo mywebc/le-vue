@@ -6,8 +6,8 @@
     <CheckBox label="复选框A" />
     <CheckBox label="复选框B" />
     <CheckBox label="复选框C" />
-    <CheckBox label="复选框D" disabled />
-    <CheckBox label="复选框E" disabled />
+    <CheckBox label="复选框D" />
+    <CheckBox label="复选框E" />
   </check-box-group>
 </template>
 
@@ -19,6 +19,7 @@ export default {
   components: { CheckBoxGroup, CheckBox },
   setup() {
     const options = reactive(["复选框A", "复选框D"]);
+
     return { options };
   },
 };
