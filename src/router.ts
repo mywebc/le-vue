@@ -13,6 +13,7 @@ import Layout from "./components/LayoutDemo.vue";
 import Spin from "./components/SpinDemo.vue";
 import Radio from "./components/RadioDemo.vue";
 import CheckBox from "./components/CheckBoxDemo.vue";
+import Collapse from "./components/CollapseDemo.vue";
 
 import intro from "./markdown/intro.md";
 import getStarted from "./markdown/get-started.md"
@@ -89,6 +90,10 @@ export const router = createRouter({
       {
         path: "checkBox",
         component: CheckBox
+      },
+      {
+        path: "collapse",
+        component: Collapse
       }
     ]
   }

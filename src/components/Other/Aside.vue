@@ -45,6 +45,9 @@
       <li>
         <router-link to="/doc/checkBox" active-class="activeCurrent">CheckBox 复选框</router-link>
       </li>
+       <li>
+        <router-link to="/doc/collapse" active-class="activeCurrent">Collapse 折叠面板</router-link>
+      </li>
     </ul>
   </div>
 </template>
