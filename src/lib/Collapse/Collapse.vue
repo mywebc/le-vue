@@ -1,5 +1,5 @@
 <template>
-  <div class="le-collapse">collapse</div>
+  <div class="le-collapse">collapse123</div>
 </template>
 
 <script lang="ts">
