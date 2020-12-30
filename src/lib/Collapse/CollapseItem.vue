@@ -4,6 +4,7 @@
       :class="{
         'collapse-item-title': true,
         isLastChild: isLastChild && !itemContentDisplay,
+        'collapse-item-title-disabled': disabled,
       }"
     >
       <span class="collapse-icon"
@@ -22,7 +23,9 @@
       <div
         class="collapse-item-content-box"
         :style="{
-          borderBottom: `${itemContentDisplay && !isLastChild ? '1px solid rgba(0, 0, 0, 0.3)' : ''}`,
+          borderBottom: `${
+            itemContentDisplay && !isLastChild ? '1px solid rgba(0, 0, 0, 0.3)' : ''
+          }`,
         }"
       >
         <slot></slot>
@@ -32,7 +35,7 @@
 </template>
 
 <script lang="ts">
-import { ref } from "vue";
+import { ref, inject, reactive, watch, onMounted } from "vue";
 import Icon from "../../lib/Icon.vue";
 export default {
   components: { Icon },
@@ -44,13 +47,52 @@ export default {
       type: Boolean,
       default: false,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    itemKey: {
+      type: Number,
+    },
   },
+  emits: ["currentSpreadEvent"],
   setup(props, ctx) {
     const itemContentDisplay = ref(false);
+    const currentSpreadStatus = reactive(
+      inject("currentSpreadStatus") as {
+        currentSpread: number;
+        accordion: boolean;
+        defaultSpread: number[];
+      }
+    );
+
+    onMounted(() => {
+      if (
+        currentSpreadStatus.defaultSpread.length > 0 &&
+        currentSpreadStatus.defaultSpread.includes(props.itemKey)
+      ) {
+        itemContentDisplay.value = true;
+      }
+    });
+
+    watch(currentSpreadStatus, () => {
+      if (currentSpreadStatus.accordion) {
+        if (currentSpreadStatus.currentSpread === props.itemKey) {
+          itemContentDisplay.value = true;
+        } else {
+          itemContentDisplay.value = false;
+        }
+      }
+    });
+
     const handleClickPanel = () => {
       itemContentDisplay.value = !itemContentDisplay.value;
+      ctx.emit("currentSpreadEvent", {
+        key: props.itemKey,
+        status: itemContentDisplay.value,
+      });
     };
-    return { itemContentDisplay, handleClickPanel };
+    return { itemContentDisplay, handleClickPanel, currentSpreadStatus };
   },
 };
 </script>
@@ -78,6 +120,14 @@ export default {
     }
     &.isLastChild {
       border-bottom: 0;
+    }
+    &.collapse-item-title-disabled {
+      cursor: not-allowed;
+      opacity: 0.4;
+      .collapse-icon {
+        cursor: not-allowed;
+        pointer-events: none;
+      }
     }
   }
   .collapse-item-content {

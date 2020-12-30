@@ -1,8 +1,8 @@
 <demo>
-基本用法
+禁用状态
 </demo>
 <template>
-  <Collapse v-model:defaultSpread="defaultSpread">
+  <Collapse>
     <collapse-item title="This is panel header 1">
       <p>
         A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it
@@ -31,7 +31,7 @@
         can be found as a welcome guest in many households across the world.
       </p>
     </collapse-item>
-    <collapse-item title="This is panel header 3">
+    <collapse-item title="This is panel header 3" disabled>
       <p>
         A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it
         can be found as a welcome guest in many households across the world.
@@ -51,12 +51,7 @@
 <script lang="ts">
 import Collapse from "../../lib/Collapse/Collapse.vue";
 import CollapseItem from "../../lib/Collapse/CollapseItem.vue";
-import { reactive, ref } from "vue";
 export default {
   components: { Collapse, CollapseItem },
-  setup() {
-    const defaultSpread = ref([0]);
-    return { defaultSpread };
-  },
 };
 </script>
