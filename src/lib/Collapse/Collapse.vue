@@ -77,5 +77,6 @@ export default {
 .le-collapse {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
+  overflow: hidden;
 }
 </style>
