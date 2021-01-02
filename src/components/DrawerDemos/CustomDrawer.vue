@@ -1,5 +1,5 @@
 <demo>
-基本用法
+自定义内容
 </demo>
 <template>
   <Drawer v-model:visible="visible">
@@ -7,15 +7,10 @@
       <strong>标题</strong>
     </template>
     <template v-slot:content>
-      <p>这是一段信息。</p>
-      <p>这是一段信息。</p>
-      <p>这是一段信息。</p>
-    </template>
-      <template v-slot:footer>
-        <Button @click="toggleDialog2" level="main">确认文本</Button>
+      <p>自定义的内容！！</p>
     </template>
   </Drawer>
-  <Button @click="drawerDeafult">default</Button>
+  <Button @click="drawerDeafult">custom</Button>
 </template>
 
 <script lang="ts">

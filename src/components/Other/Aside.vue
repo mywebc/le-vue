@@ -52,7 +52,7 @@
         <router-link to="/doc/affix" active-class="activeCurrent">Affix 固钉</router-link>
       </li>
        <li>
-        <router-link to="/doc/drawer" active-class="activeCurrent">drawer 抽屉</router-link>
+        <router-link to="/doc/drawer" active-class="activeCurrent">Drawer 抽屉</router-link>
       </li>
     </ul>
   </div>
