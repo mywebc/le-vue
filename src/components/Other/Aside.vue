@@ -54,6 +54,9 @@
        <li>
         <router-link to="/doc/drawer" active-class="activeCurrent">Drawer 抽屉</router-link>
       </li>
+      <li>
+        <router-link to="/doc/message" active-class="activeCurrent">Message 信息提示</router-link>
+      </li>
     </ul>
   </div>
 </template>
