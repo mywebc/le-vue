@@ -7,10 +7,9 @@
         'collapse-item-title-disabled': disabled,
       }"
     >
-      <span class="collapse-icon"
-        ><Icon :name="itemContentDisplay ? `arrow-down` : `arrow-right`" /
-        @click="handleClickPanel"></span
-      >
+      <span class="collapse-icon">
+        <Icon :name="itemContentDisplay ? `arrow-down` : `arrow-right`" @click="handleClickPanel" />
+      </span>
       {{ title }}
     </div>
     <div
@@ -41,19 +40,19 @@ export default {
   components: { Icon },
   props: {
     title: {
-      type: String,
+      type: String
     },
     isLastChild: {
       type: Boolean,
-      default: false,
+      default: false
     },
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     itemKey: {
-      type: Number,
-    },
+      type: Number
+    }
   },
   emits: ["currentSpreadEvent"],
   setup(props, ctx) {
@@ -89,11 +88,11 @@ export default {
       itemContentDisplay.value = !itemContentDisplay.value;
       ctx.emit("currentSpreadEvent", {
         key: props.itemKey,
-        status: itemContentDisplay.value,
+        status: itemContentDisplay.value
       });
     };
     return { itemContentDisplay, handleClickPanel, currentSpreadStatus };
-  },
+  }
 };
 </script>
 
