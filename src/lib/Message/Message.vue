@@ -1,11 +1,16 @@
 <template>
   <Teleport to="body">
     <div class="le-message-wrapper" v-if="visible">
-      <div class="le-message">
+      <div
+        :class="{
+          'le-message': true,
+          'hasClose': showClose,
+        }"
+      >
         <main>
           <Icon :name="iconType" :class="iconType" />
           {{ message }}
-          <span @click="close" class="le-message-close"></span>
+          <span v-if="showClose" @click="close" class="le-message-close"></span>
         </main>
       </div>
     </div>
@@ -56,7 +61,7 @@ export default {
     const close = () => {
       nextTick(() => {
         ctx.emit("update:visible", false);
-        ctx.emit("onClose")
+        ctx.emit("onClose");
       });
     };
 
@@ -101,7 +106,6 @@ $error: #f56c6c;
     padding: 12px 16px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     .le-icon {
       width: 1.5em;
       height: 1.5em;
@@ -144,6 +148,11 @@ $error: #f56c6c;
 
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+  &.hasClose {
+    > main {
+      justify-content: space-between;
     }
   }
 }
