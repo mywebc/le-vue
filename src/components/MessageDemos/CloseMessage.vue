@@ -1,8 +1,11 @@
 <demo>
-基本用法
+可关闭
 </demo>
 <template>
-  <Button @click="openDefault">default</Button>
+  <Button @click="openDefault('info')">info</Button>
+  <Button @click="openDefault('error')">error</Button>
+  <Button @click="openDefault('success')">success</Button>
+  <Button @click="openDefault('warning')">warning</Button>
 </template>
 
 <script lang="ts">
@@ -13,9 +16,11 @@ import { ref } from "vue";
 export default {
   components: { Button },
   setup() {
-    const openDefault = () => {
+    const openDefault = (type) => {
       Message({
         message: "这是一条message",
+        showClose: true,
+        type,
       });
     };
     return {

@@ -1,7 +1,7 @@
-import Message from "./Message.vue";
+import { default as MessageCom } from "./Message.vue";
 import { createApp, h } from "vue";
-export const messageOpen = (options) => {
-  const { message } = options;
+export const Message = (options) => {
+  const { message, type, duration, showClose, onClose } = options;
   const div = document.createElement("div");
   document.body.appendChild(div);
   const close = () => {
@@ -11,20 +11,22 @@ export const messageOpen = (options) => {
   const app = createApp({
     render() {
       return h(
-        Message,
+        MessageCom,
         {
           visible: true,
-          // "onUpdate:visible": (newVisible) => {
-          //   if (newVisible === false) {
-          //     close();
-          //   }
-          // },
-          message
+          duration,
+          message,
+          type,
+          showClose,
+          onClose,
+          "onUpdate:visible": (newVisible) => {
+            if (newVisible === false) {
+              close();
+            }
+          },
         },
-        // {
-        //   title,
-        //   content,
-        // }
+        {
+        }
       );
     },
   });

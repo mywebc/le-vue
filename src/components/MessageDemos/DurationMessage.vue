@@ -1,8 +1,9 @@
 <demo>
-基本用法
+自定义时长
 </demo>
 <template>
-  <Button @click="openDefault">default</Button>
+  <Button @click="openDefault">custom 1500ms</Button>
+  <Button @click="openDefault2">custom 2000ms</Button>
 </template>
 
 <script lang="ts">
@@ -16,10 +17,18 @@ export default {
     const openDefault = () => {
       Message({
         message: "这是一条message",
+        duration: 1500,
+      });
+    };
+    const openDefault2 = () => {
+      Message({
+        message: "这是一条message",
+        duration: 2000,
       });
     };
     return {
       openDefault,
+      openDefault2,
     };
   },
 };
