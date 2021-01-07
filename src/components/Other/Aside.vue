@@ -57,6 +57,9 @@
        <li>
         <router-link to="/doc/tabs" active-class="activeCurrent">Tabs 标签页</router-link>
       </li>
+       <li>
+        <router-link to="/doc/carousel" active-class="activeCurrent">Carousel 走马灯</router-link>
+      </li>
       <span>信息反馈</span>
         <li>
         <router-link to="/doc/drawer" active-class="activeCurrent">Drawer 抽屉</router-link>

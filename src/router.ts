@@ -17,6 +17,7 @@ import Collapse from "./components/CollapseDemo.vue";
 import Affix from "./components/AffixDemo.vue";
 import Drawer from "./components/DrawerDemo.vue"
 import Message from "./components/MessageDemo.vue" 
+import Carousel from "./components/CarouselDemo.vue"
 
 import intro from "./markdown/intro.md";
 import getStarted from "./markdown/get-started.md"
@@ -109,6 +110,10 @@ export const router = createRouter({
       {
         path: "message",
         component: Message
+      },
+      {
+        path: "carousel",
+        component: Carousel
       }
     ]
   }
