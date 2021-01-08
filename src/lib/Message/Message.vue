@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { reactive, onMounted, nextTick, PropType, ref, watch } from "vue";
+import { reactive, onMounted, nextTick, PropType, ref } from "vue";
 import Icon from "../Icon.vue";
 export default {
   components: { Icon },

@@ -1,8 +1,8 @@
 <demo>
-基础用法
+自定义动画时间
 </demo>
 <template>
-  <Carousel selected="1" :dots="false">
+  <Carousel selected="1" :autoPlayDelay="2000">
     <CarouselItem name="1" :style="{ backgroundColor: 'rgb(102,199,150)' }">
       <h3>1</h3>
     </CarouselItem>

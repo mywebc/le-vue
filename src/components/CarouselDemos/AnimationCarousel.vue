@@ -1,8 +1,8 @@
 <demo>
-基础用法
+可关闭动画
 </demo>
 <template>
-  <Carousel selected="1" :dots="false">
+  <Carousel selected="1" :animationEnabled="false">
     <CarouselItem name="1" :style="{ backgroundColor: 'rgb(102,199,150)' }">
       <h3>1</h3>
     </CarouselItem>

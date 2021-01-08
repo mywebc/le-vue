@@ -1,8 +1,8 @@
 <demo>
-基础用法
+指示器显示
 </demo>
 <template>
-  <Carousel selected="1" :dots="false">
+  <Carousel arrow>
     <CarouselItem name="1" :style="{ backgroundColor: 'rgb(102,199,150)' }">
       <h3>1</h3>
     </CarouselItem>
