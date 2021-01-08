@@ -74,7 +74,7 @@ export default {
     },
     arrow: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   components: { Icon },
