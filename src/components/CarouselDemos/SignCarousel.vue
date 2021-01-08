@@ -1,8 +1,8 @@
 <demo>
-指示器显示的控制
+指示器的控制
 </demo>
 <template>
-  <Carousel :arrow="false" :dots="false">
+  <Carousel selected="1" :dots="false" :arrow="false">
     <CarouselItem name="1">
       <div :style="{ backgroundColor: 'rgb(102,199,150)' }">1</div>
     </CarouselItem>
