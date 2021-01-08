@@ -30,6 +30,9 @@
        <li>
         <router-link to="/doc/affix" active-class="activeCurrent">Affix 固钉</router-link>
       </li>
+      <li>
+        <router-link to="/doc/pager" active-class="activeCurrent">Pager 页码</router-link>
+      </li>
       <span>数据录入</span>
         <li>
         <router-link to="/doc/switch" active-class="activeCurrent">Switch 开关</router-link>

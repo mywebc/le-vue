@@ -16,8 +16,9 @@ import CheckBox from "./components/CheckBoxDemo.vue";
 import Collapse from "./components/CollapseDemo.vue";
 import Affix from "./components/AffixDemo.vue";
 import Drawer from "./components/DrawerDemo.vue"
-import Message from "./components/MessageDemo.vue" 
+import Message from "./components/MessageDemo.vue"
 import Carousel from "./components/CarouselDemo.vue"
+import Pager from "./components/PagerDemo.vue"
 
 import intro from "./markdown/intro.md";
 import getStarted from "./markdown/get-started.md"
@@ -114,6 +115,10 @@ export const router = createRouter({
       {
         path: "carousel",
         component: Carousel
+      },
+      {
+        path: 'pager',
+        component: Pager
       }
     ]
   }
@@ -121,10 +126,10 @@ export const router = createRouter({
 })
 
 router.afterEach((to, from) => {
-  if(to.fullPath === '/doc/get-started') {
-  //   if(location.href.indexOf("#reloaded")==-1){
-  //     location.href=location.href+"#reloaded";
-  //     location.reload();
-  // }
+  if (to.fullPath === '/doc/get-started') {
+    //   if(location.href.indexOf("#reloaded")==-1){
+    //     location.href=location.href+"#reloaded";
+    //     location.reload();
+    // }
   }
 })
