@@ -1,8 +1,8 @@
 <demo>
-基本用法
+迷你模式
 </demo>
 <template>
-  <Pager :totalPage="5" v-model:currentPage="currentPage" @currentChange="aa"/>
+  <Pager :totalPage="100" v-model:currentPage="currentPage" size="small"/>
 </template>
 
 <script lang="ts">
@@ -14,12 +14,8 @@ export default {
   components: { Button, Pager },
   setup() {
     const currentPage = ref(1);
-    const aa = (x) => {
-      console.log(x)
-    }
     return {
       currentPage,
-      aa
     };
   },
 };
