@@ -73,6 +73,9 @@
       <li>
         <router-link to="/doc/dialog" active-class="activeCurrent">Dialog 对话框</router-link>
       </li>
+      <li>
+        <router-link to="/doc/popover" active-class="activeCurrent">Popover 弹出层</router-link>
+      </li>
     </ul>
   </div>
 </template>
