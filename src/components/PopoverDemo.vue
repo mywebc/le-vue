@@ -3,7 +3,7 @@
     <h2>Popover 弹出层</h2>
     <Demo :component="BasicPopover" describe="基础用法" />
     <Demo :component="DirectionPopover" describe="支持四个不同方向" />
-    <Demo :component="TriggerPopover" describe="支持四个不同方向" />
+    <Demo :component="TriggerPopover" describe="支持click和hover" />
     <h2>API</h2>
     <Table :columns="columns" :dataSource="dataSource" />
   </div>
