@@ -1,12 +1,8 @@
 <demo>
-基本用法
+多层嵌套
 </demo>
 <template>
-  <Cascader
-    v-model:source="source"
-    popover-height="200px"
-    v-model:selected="selected"
-  />
+  <Cascader v-model:source="source" popover-height="100px" v-model:selected="selected" />
 </template>
 
 <script lang="ts">
@@ -20,9 +16,18 @@ export default {
         name: "北京",
         value: "beijing",
         children: [
-          { name: "大兴区", value: "daxing" },
+          {
+            name: "大兴区",
+            value: "daxing",
+            children: [
+              {
+                name: "西红门镇",
+                value: "xihongmeng",
+                children: [{ name: "理想城", value: "lixiangchen" }],
+              },
+            ],
+          },
           { name: "朝阳区", value: "chaoyan" },
-          { name: "通州区", value: "tongzhou" },
         ],
       },
       {
@@ -31,16 +36,6 @@ export default {
         children: [
           { name: "黄浦区", value: "huangpu" },
           { name: "徐汇区", value: "xuhui" },
-          { name: "宝山区", value: "baoshang" },
-        ],
-      },
-      {
-        name: "江苏省",
-        value: "jiangsu",
-        children: [
-          { name: "南京市", value: "nanjing" },
-          { name: "苏州市", value: "suzhou" },
-          { name: "无锡市", value: "wuxi" },
         ],
       },
     ]);

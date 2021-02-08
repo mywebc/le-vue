@@ -1,12 +1,8 @@
 <demo>
-基本用法
+禁用状态
 </demo>
 <template>
-  <Cascader
-    v-model:source="source"
-    popover-height="200px"
-    v-model:selected="selected"
-  />
+  <Cascader v-model:source="source" popover-height="200px" v-model:selected="selected" />
 </template>
 
 <script lang="ts">
@@ -22,7 +18,7 @@ export default {
         children: [
           { name: "大兴区", value: "daxing" },
           { name: "朝阳区", value: "chaoyan" },
-          { name: "通州区", value: "tongzhou" },
+          { name: "通州区", value: "tongzhou", disabled: true },
         ],
       },
       {
@@ -37,6 +33,7 @@ export default {
       {
         name: "江苏省",
         value: "jiangsu",
+        disabled: true,
         children: [
           { name: "南京市", value: "nanjing" },
           { name: "苏州市", value: "suzhou" },
