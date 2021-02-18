@@ -13,13 +13,13 @@ export default {};
 <style lang="scss" scoped>
 .main {
     width: 100%;
-    height: calc(100vh - 80px);
+    // height: calc(100vh - 80px);
     display: flex;
-    overflow: hidden;
+    // overflow: hidden;
 
     .doc-wrapper {
         width: 100%;
-        overflow: auto;
+        // overflow: auto;
         padding: 20px 40px 40px 40px;
     }
 }

@@ -95,6 +95,7 @@ export default {};
   width: 260px;
   border-right: 1px solid #eee;
   box-shadow: 2px 2px 10px #eee;
+  padding-bottom: 100px;
   .aside_items {
     li {
       height: 40px;

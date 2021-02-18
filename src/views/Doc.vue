@@ -62,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 .doc {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -72,6 +72,7 @@ export default {
     display: flex;
     padding-top: 10px;
     height: 100%;
+    overflow: auto;
   }
   @media screen and (max-width: 600px) {
     .aside {
