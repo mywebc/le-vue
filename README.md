@@ -1,4 +1,4 @@
-# le-vue
+# le-vue-ui
 一套基于Vue3和TypeScript的UI组件库。
 > 本组件库旨在学习Vue3新特性以及熟悉TypeScript语法，可以作为学习项目，因此不建议在生产环境中使用。
 ## 特性
