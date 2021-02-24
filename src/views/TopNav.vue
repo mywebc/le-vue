@@ -12,7 +12,7 @@
         <router-link to="/doc">Docs</router-link>
       </div>
       <div class="guide">
-        <a href="https://www.github.com">Github</a>
+        <a href="https://github.com/mywebc/le-vue">Github</a>
       </div>
     </div>
   </div>
