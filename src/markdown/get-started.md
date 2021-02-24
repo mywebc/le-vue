@@ -12,6 +12,7 @@ yarn add le-vue-ui
 
 ```js
 import { Button, Switch, Radio } from "le-vue-ui"
+import "le-vue-ui/dist/lib/leUI.esm.css"
 ```
 
 ## Vue 单文件组件
