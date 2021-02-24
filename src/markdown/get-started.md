@@ -11,7 +11,7 @@ yarn add le-vue-ui
 ## 引入组件
 
 ```js
-import { Button, Tabs, Switch, Dialog } from "le-ui"
+import { Button, Switch, Radio } from "le-vue-ui"
 ```
 
 ## Vue 单文件组件
@@ -23,9 +23,9 @@ import { Button, Tabs, Switch, Dialog } from "le-ui"
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "le-ui"
+import { Button } from "le-vue-ui"
 export default {
-  components: {Button}
+  components: { Button }
 }
 </script>
 ```

@@ -11,7 +11,7 @@
           <h3>一套基于Vue3和TypeScript的UI框架</h3>
           <div class="links">
             <router-link to="/doc" class="start">查看文档</router-link>
-            <a href="http://github.com" class="github" target="_blank">Github</a>
+            <a href="https://github.com/mywebc/le-vue" class="github" target="_blank">Github</a>
           </div>
         </div>
       </div>

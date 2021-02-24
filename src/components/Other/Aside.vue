@@ -49,9 +49,9 @@
       <li>
         <router-link to="/doc/rate" active-class="activeCurrent">Rate 评分</router-link>
       </li>
-      <li>
+      <!-- <li>
         <router-link to="/doc/datepicker" active-class="activeCurrent">DatePicker 日期选择</router-link>
-      </li>
+      </li> -->
        <li>
         <router-link to="/doc/cascader" active-class="activeCurrent">Cascader 级联选择</router-link>
       </li>

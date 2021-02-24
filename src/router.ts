@@ -20,7 +20,7 @@ import Message from "./components/MessageDemo.vue"
 import Carousel from "./components/CarouselDemo.vue"
 import Pager from "./components/PagerDemo.vue"
 import Popover from "./components/PopoverDemo.vue"
-import DatePicker from "./components/DatePickerDemo.vue"
+// import DatePicker from "./components/DatePickerDemo.vue"
 import Cascader from "./components/CascaderDemo.vue"
 
 import intro from "./markdown/intro.md";
@@ -127,10 +127,10 @@ export const router = createRouter({
         path: 'popover',
         component: Popover
       },
-      {
-        path: 'datePicker',
-        component: DatePicker
-      },
+      // {
+      //   path: 'datePicker',
+      //   component: DatePicker
+      // },
         {
         path: 'cascader',
         component: Cascader
